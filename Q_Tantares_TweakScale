@@ -1,0 +1,1295 @@
+SCALETYPE
+{
+    name = Tantares_Ports
+    freeScale = false
+    defaultScale =   0.625
+    scaleFactors =   0.625,  0.9375,  1.25,  1.5
+    scaleNames =     0.625m, 0.9375m, 1.25m, 1.5m
+
+}
+SCALETYPE
+{
+    name = Tantares_Pods
+    freeScale = false
+    defaultScale =   1.25
+    scaleFactors =   1.25,  1.5, 1.875
+    scaleNames =     1.25m, 1.5m, 1.875m
+
+}
+SCALETYPE
+{
+    name = Tantares_LK
+    freeScale = false
+    defaultScale =   1.25
+    scaleFactors =   0.9375,  1.25  
+    scaleNames =     0.9375m, 1.25m
+
+}
+SCALETYPE
+{
+    name = Tantares_Probes
+    freeScale = false
+    defaultScale =   0.625
+    scaleFactors =   0.625,  0.9375,  1.25,  1.5,  1.875
+    scaleNames =     0.625m, 0.9375m, 1.25m, 1.5m, 1.875m
+}
+SCALETYPE
+{
+    name = Tantares_Large
+    freeScale = false
+    defaultScale =   2.5
+    scaleFactors =   2.5,  3.0,  3.75
+    scaleNames =     2.5m, 3.0m, 3.75m
+}
+SCALETYPE
+{
+    name = Tantares_Alnair
+    freeScale = false
+    defaultScale =   1.875
+    scaleFactors =   1.5,  1.875, 2.5,  3.75
+    scaleNames =     1.5m, 1.87m, 2.5m, 3.75m
+}
+SCALETYPE
+{
+    name = Tantares_Default
+    freeScale = false
+    defaultScale =   0.625
+    scaleFactors =   0.625,  0.9375,  1.25,  1.5,  1.875,  2.5,  3.75
+    scaleNames =     0.625m, 0.9375m, 1.25m, 1.5m, 1.875m, 2.5m, 3.75m
+
+}
+SCALETYPE
+{
+    name = Tantares_SurfAttach
+    freeScale = false
+    //defaultScale = 0.625
+    scaleFactors =   0.625,  0.9375,  1.25,  1.5,  1.875,  2.5,  3.0,  3.75
+    scaleNames =     0.625m, 0.9375m, 1.25m, 1.5m, 1.875m, 2.5m, 3.0m, 3.75m
+
+}
+
+
+//ATV
+@PART[Capella_Control_A] // CAPELLA Cargo and Control Block
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Alnair
+        defaultScale = 2.5
+	}
+}
+@PART[Capella_Mono_A] // CAPELLA RCS Fuel Tank
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 2.5
+	}
+}
+@PART[Capella_Solar_A] // CAPELLA 1x4 Large Photovoltaic Array 
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 2.5
+	}
+}
+@PART[Capella_Antenna_A] // CAPELLA Antenna Deployable Boom 
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 2.5
+	}
+}
+@PART[Capella_Structure_A] // CAPELLA Forward Adapter
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 1.25
+	}
+}
+@PART[Capella_Structure_B] // CAPELLA Forward Prodapter
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 1.25
+	}
+}
+@PART[Capella_Engine_A] // CAPELLA Orbital Manouvering System
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 2.5
+	}
+}
+
+
+//CYGNUS
+@PART[Pollux_Control_A] // PCM-P7L "Polestar" Pressurized Cargo Module
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 0.625
+	}
+}
+@PART[Phoenix_Ex_Control_A] // PCM-004 “Phoenix” Pressurized Cargo Module
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_LK
+        defaultScale = 1.25
+	}
+}
+@PART[Pollux_Engine_A] // PSM-9S0 ìChip Chipî Service Module
+{
+	#@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 0.625
+	}
+}
+@PART[Phoenix_Ex_Engine_A] // PSM-Y25 “Deneb” Service Module
+{
+	#@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.875
+	}
+}
+@PART[Pollux_RCS_A] // RV-30 Thruster Block
+{
+    #@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 0.625
+        }
+}
+@PART[Pollux_Solar_A] // PPP-AYG ìMoochî 1x3 Photovoltaic Panels
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 0.625
+	}
+}
+@PART[Phoenix_Ex_Solar_A] // PPP-C7A “Gallivant” 1x3 Photovoltaic Panels
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.875
+	}
+}
+
+
+//FOBOS
+@PART[Agena_Control_A] // Probodobodyne FOBO
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 0.625
+	}
+}
+@PART[Agena_Mono_A] // FL-R90 RCS Fuel Tank
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 0.625
+	}
+}
+@PART[Agena_Port_A] // "Kontact" Docking System
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Ports
+        defaultScale = 0.625
+	}
+}
+@PART[Agena_RCS_A] // RV-25 Thruster Block
+{
+    #@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 0.625
+        }
+}
+@PART[Agena_Solar_A] // G.U.A.R.D. Photovoltaic Panel
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 0.625
+    }
+}
+@PART[Agena_Structure_A] // Narrow Octagonal Strut
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 0.625
+    }
+}
+
+//FUJI
+@PART[Polaris_Crew_A] // Polaris Command Module
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Large
+        defaultScale = 2.5
+	}
+}
+@PART[Polaris_Engine_A] // TE-5 Orbital Motor
+{
+    #@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = .625
+    }
+}
+@PART[Polaris_Heatshield_A] // Polaris Ablative Heatshield
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 2.5
+	}
+}
+@PART[Polaris_LFO_A] // TELFO-1 Fuel Tank
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 1.25
+	}
+}
+@PART[Polaris_Orbital_A] // Polaris Orbital Module
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Large
+        defaultScale = 2.5
+	}
+}
+@PART[Polaris_Port_A] // PP+ Docking Parachute
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Ports
+        defaultScale = .625
+	}
+}
+@PART[Polaris_Solar_A] // P-3 1x3 Photovoltaic Panels
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.25
+	}
+}
+@PART[Polaris_Structure_A] // Polaris Cross Module
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 1.25
+	}
+}
+
+//GEMINI
+@PART[Spica_Crew_A] //  G-200A Crew Capsule
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Pods
+        defaultScale = 1.875
+	}
+}
+@PART[Spica_Crew_B] //  G-600B Crew Capsule
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Pods
+        defaultScale = 1.875
+	}
+}
+@PART[Spica_Engine_A] // G-750A Orbital Rocket Motor
+{
+    #@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Pods
+        defaultScale = 1.875
+    }
+}
+@PART[Spica_Parachute_A] // G-143A Orientation Parachute
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Ports
+        defaultScale = .625
+	}
+}
+@PART[Spica_Port_A] // G-245A Docking Unit
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Ports
+        defaultScale = .625
+	}
+}
+@PART[Spica_RCS_A] // G-000A RCS System
+{
+    #@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.25
+    }
+}
+
+
+//LK
+@PART[Libra_Antenna_A] // L-LG1 Low Gain Antenna
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.25
+	}
+}
+@PART[Libra_Antenna_B] // L-HG1 High Gain Antenna
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.25
+	}
+}
+@PART[Libra_Crew_A] // Mk1 "Korolev" Lander Can
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_LK
+        defaultScale = 1.25
+	}
+}
+@PART[Libra_Engine_A] // L-858 Rocket Motor
+{
+	#@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 1.25
+	}
+}
+@PART[Libra_Engine_B] // LV-T15 Liquid Fuel Engine
+{
+	#@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 1.25
+	}
+}
+@PART[Libra_Ladder_A] // L-L1 Ladder
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.25
+	}
+}
+@PART[Libra_Leg_A] // L-1 Landing Leg
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.25
+	}
+}
+@PART[Libra_LFO_A] // L-425 Fuel Tank
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 1.25
+	}
+}
+@PART[Libra_LFO_B] // LV-F30 Fuel Tank
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 1.25
+	}
+}
+@PART[Libra_Nesting_A] // L-D30 Nesting Jet
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.25
+	}
+}
+@PART[Libra_RCS_A] // L-151 Orientation Block
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_LK
+        defaultScale = 1.25
+	}
+}
+
+//PROGRESS
+@PART[Hamal_Adapter_A] // Hamal AS-SKR Adapter Segment 
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+@PART[Hamal_Adapter_B] // Hamal AS-ZFI Adapter Segment
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+@PART[Hamal_Control_A] // Hamal CB-XFK Control Block 
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+@PART[Hamal_Control_B] // Hamal DB-Z6D Descent Block 
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+@PART[Hamal_Control_C] // Hamal CB-VPP Control Block 
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+@PART[Hamal_Control_C] // Hamal CB-VPP Control Block 
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+@PART[Hamal_Control_C] // Hamal CB-VPP Control Block 
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+@PART[Hamal_Control_C] // Hamal CB-VPP Control Block 
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+@PART[Hamal_Battery_D] // Hamal DB-UAG Descent Block
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.25
+	}
+}
+@PART[Hamal_Control_A] // Hamal Control Block 
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+@PART[Hamal_Control_B] // Hamal Descent Block 
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+@PART[Hamal_Habitation_A] // Hamal HM-BV1 Habitation Module
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+@PART[Hamal_Habitation_B] // Hamal HM-XI2 Habitation Module
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+@PART[Hamal_Orbital_A] // Hamal OM-4D1 Orbital Module
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+@PART[Hamal_Orbital_B] // Hamal OM-3ND Orbital Module
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+@PART[Tantares_DockingCompartment_A] // Hamal DC-6CL Docking Compartment 
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Pods
+        defaultScale = 1.25
+	}
+}
+@PART[Tantares_DockingCompartment_B] // Hamal DC-CH0 Docking Compartment
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Pods
+        defaultScale = 0.9375
+	}
+}
+@PART[Hamal_LFO_A] // Hamal FT-EF4 Fuel Tank
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Pods
+        defaultScale = 1.25
+	}
+}
+@PART[Hamal_LFO_B] // Hamal FT-T8N Fuel Tank
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Pods
+        defaultScale = 1.25
+	}
+}
+@PART[Hamal_LFO_B] // Hamal MT-CYH MonoPropellant Tank
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Pods
+        defaultScale = 1.25
+	}
+}
+
+
+//SOYUZ
+@PART[Tantares_Antenna_A] // T-CD Communication Dish 
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.25
+	}
+}
+@PART[Tantares_Apas_A] // T084A Androgynus Docking Port
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Alnair
+        defaultScale = 1.25m
+	}
+}
+@PART[Tantares_Crew_A] // T491A "Khleb" Crew Module
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Pods
+        defaultScale = 1.25
+	}
+}
+@PART[Tantares_Decoupler_A] // T093A Decoupler
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 1.25
+	}
+}
+@PART[Tantares_DockingMechanism_A] // T079A Docking Mechanism
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Ports
+        defaultScale = 0.9375
+	}
+}
+@PART[Tantares_DockingMechanism_B] // T079B Docking Drogue
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Ports
+        defaultScale = 0.9375
+	}
+}
+@PART[Tantares_Engine_A] // T637A Orbital Manouvering System
+{
+	#@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+@PART[Tantares_Engine_B] // T103B "Farshot" Engine
+{
+	#@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+@PART[Tantares_Light_A] // T-DL Docking Light
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.25
+	}
+}
+@PART[Tantares_Orbital_A] // T637A Orbital Module
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Pods
+        defaultScale = 1.25
+	}
+}
+@PART[Tantares_Habitation_A] // T579A Habitation Module
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Pods
+        defaultScale = 1.25
+	}
+}
+@PART[Tantares_Orbital_B] // T-Mianbao Orbital Module
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Pods
+        defaultScale = 1.25
+	}
+}
+@PART[Tantares_Parachute_A] // T037A Return Parachute
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = .625
+	}
+}
+@PART[Tantares_Port_A] // T053A Docking Probe
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Ports
+        defaultScale = .625
+	}
+}
+@PART[Tantares_Port_B] // T053B Passive Docking Port
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Ports
+        defaultScale = .625
+	}
+}
+@PART[Tantares_RCS_A] // RV-20 Thruster Block
+{
+	#@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 1.25
+	}
+}
+@PART[Tantares_Solar_A] // T-PA1 1x4 Photovoltaic Panels
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.25
+	}
+}
+@PART[Tantares_Solar_B] // T-PA2 1x4 Photovoltaic Panels
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.25
+	}
+}
+@PART[Tantares_Solar_C] // T-PA3 1x2 Photovoltaic Panels
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.25
+	}
+}
+//SALYUT
+@PART[Vega_Antenna_A] // V-ODA Backup Antenna
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 2.5
+	}
+}
+@PART[Vega_Antenna_B] // "Priority" Dish Mk5
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 2.5
+	}
+}
+@PART[Vega_Antenna_C] // V-RE "Needle" Rendezvous Antenna
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.875
+	}
+}
+@PART[Vega_Mono_A] // V-MC MonoPropellant Capsule
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.25
+	}
+}
+@PART[Vega_Node_B] // V-N "Nest" Structural Node 
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = .625
+	}
+}
+@PART[Vega_Solar_C] // V-SA Photovoltaic Array
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 2.5
+	}
+}
+@PART[Vega_Crew_A] // V-DOS-A "Rotund" Crew Block
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Large
+        defaultScale = 2.5
+	}
+}
+@PART[Vega_Crew_B] // V-DOS-B "Heart" Crew Block
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Large
+        defaultScale = 2.5
+	}
+}
+@PART[Vega_Crew_C] // V-DOS-C "Neck" Crew Block
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Pods
+        defaultScale = 1.25
+	} 
+}
+@PART[Vega_Crew_D] // V-DOS-D "Quantum" Science Block
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Large
+        defaultScale = 2.5
+	} 
+}
+@PART[Vega_Crew_E] // V-DOS-E "Svelte" Crew Block
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Pods
+        defaultScale = 1.25
+	} 
+}
+@PART[Vega_Crew_F] // V-DOS-E “Smoke” Crew Block
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Pods
+        defaultScale = 1.25
+	} 
+}
+
+@PART[Vega_Engine_A] // V-OME "Sugar" Orbital Manouvering Engine
+{
+	#@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 2.5
+	}	
+}
+@PART[Vega_Engine_B] // V-OME "Spice" Orbital Manouvering Engine
+{
+	#@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 1.25
+	}	
+}
+@PART[Vega_Engine_C] // V-OME "Star" Orbital Manouvering Engine
+{
+	#@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 1.25
+	}	
+}
+@PART[Vega_Solar_A] // V-SA Photovoltaic Array
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.875
+	}	
+}
+@PART[Vega_Solar_B] // V-SB Photovoltaic Array
+{
+    %MODULE[TweakScale]
+    {  
+        type = Tantares_SurfAttach
+        defaultScale = 1.875
+	}	
+}
+@PART[Vega_Solar_C] // V-SC Photovoltaic Array
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.875
+	}	
+}
+@PART[Vega_Solar_D] // V-SD Photovoltaic Array
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.875
+	}	
+}
+@PART[Vega_Solar_E] // V-SE Photovoltaic Array
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.875
+	}	
+}
+@PART[Vega_Truss_A] // V-ST Structural Truss
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 1.25
+	}	
+}
+
+//TKS
+@PART[Alnair_Antenna_A] // TK-CD0A Communication Array
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.875
+	}	
+}
+@PART[Alnair_Cargo_A] // TK-SM05B Service Module
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 1.875
+	}	
+}
+@PART[Alnair_Crew_A] // TK-DC03A Descent Capsule
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Alnair
+        defaultScale = 1.875
+	}	
+}
+@PART[Alnair_Crew_B] // TK-DC06B Docking & Command Module
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Alnair
+        defaultScale = 1.875
+	}	
+}
+@PART[Alnair_Crew_C] // TK-CC08C "Spectre" Crew Capsule
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Alnair
+        defaultScale = 1.875
+	}	
+}
+@PART[Alnair_Separator_A] //TK-QS01A Separator
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 1.875
+	}	
+}
+@PART[Alnair_Engine_A] // TK-DE07A Descent Engine
+{
+	#@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 1.875
+	}	
+}
+@PART[Alnair_Engine_B] // TK-OE00A Orbital Motor
+{
+	#@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.875
+	}	
+}
+@PART[Alnair_LES_A] // SULAT
+{
+	#@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = .9375
+	}	
+}
+@PART[Alnair_Mono_A] // TK-MT00A MonoPropellant Tank
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.875
+	}	
+}
+@PART[Alnair_Mono_B] // TK-MT00B MonoPropellant Tank
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.875
+	}	
+}
+@PART[Alnair_Mono_C] // TK-MT02C MonoPropellant Tank
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 1.875
+	}	
+}
+@PART[Alnair_Orbital_A] // TK-OB05A Orbital Block
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Alnair
+        defaultScale = 1.875
+	}	
+}
+@PART[Alnair_Orbital_B] // TK-OB10B Orbital Block
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Alnair
+        defaultScale = 1.875
+	}	
+}
+@PART[Alnair_Parachute_A] // TK-RC00A Return Chute
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.875
+	}	
+}
+@PART[Alnair_Parachute_B] // TK-RC04B Return Parachute
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 0.9375
+	}	
+}
+//@PART[Alnair_Port_A] // TK-DC08A Docking Connector (Commented out for now.)
+//{
+//    %MODULE[TweakScale]
+//    {
+//        type = Tantares_Ports
+//        defaultScale = 0.625
+//	}	
+//}
+//@PART[Alnair_Port_B] // TK-DC08B Docking Connector (Commented out for now.)
+//{
+//    %MODULE[TweakScale]
+//   {
+//        type = Tantares_Ports
+//        defaultScale = 0.625
+//	}	
+//}
+@PART[Alnair_Solar_A] // TK-PP00A 1x6 Photovoltaic Panels
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 2.5
+	}	
+}
+@PART[Alnair_Solar_B] // TK-PP00B 1x6 Fixed Photovoltaic Panels
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 2.5
+	}	
+}
+@PART[Alnair_Structure_A] // TK-SP01A Structural Plate A
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 2.5
+	}	
+}
+@PART[Alnair_Structure_B] // TK-SP01B Structural Plate B
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 1.875
+	}	
+}
+@PART[Alnair_Structure_C] // TK-SP01C Structural Plate C
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 1.25
+	}	
+}
+@PART[Alnair_Structure_D] // TK-SP01D Structural Plate D
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 0.9375
+	}	
+}
+@PART[Alnair_Structure_E] // TK-SP01E Structural Plate E
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 2.5
+	}	
+}
+
+
+
+//VENERA
+@PART[Fomalhaut_Control_A] // Fomalhaut Control Block
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Ports
+        defaultScale = 1.25
+	}
+}
+
+@PART[Fomalhaut_Science_A] // Fomalhaut Science-Max
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+@PART[Fomalhaut_Antenna_A] // F020A “Nova” Communication Dish 
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.875
+	}
+}
+
+//VOSTOK
+@PART[Almach_RCS_A] // RV-5 Thruster
+{
+	#@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.25
+	}
+}
+@PART[Vostok_Antenna_A] // A961A Hoop Antenna
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.25
+	}
+}
+@PART[Vostok_Decoupler_A] // A046A Staging System
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 0.625
+	}
+}
+@PART[Vostok_Engine_A] // A305A Hypergolic Engine
+{
+	#@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+@PART[Alto_Engine_A] // AL207A "Waymaker" Rocket Motor
+{
+	#@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+@PART[Alto_Engine_B] // AL300A "Waykeeper" Rocket Motor
+{
+	#@TWEAKSCALEBEHAVIOR[Engine]/MODULE[TweakScale] { }
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+@PART[Vostok_Mono_A] // A004A Propellant Tank
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_SurfAttach
+        defaultScale = 1.25
+	}
+}
+@PART[Almach_Parachute_A] // A070A Return Chute
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = .625
+	}
+}
+@PART[Vostok_Service_A] // A187A Service Module
+{
+	%MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+@PART[Alto_LFO_A] // AL492A Fuel Tank
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Probes
+        defaultScale = 1.25
+	}
+}
+
+//MISC-CASTOR
+@PART[Castor_Shield_A] // Firenze Heatshield
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 2.5
+	}
+}
+@PART[Castor_Shield_B] // Fisole Heatshield
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 1.25
+	}
+}
+
+//PPTS
+@PART[Tucana_Heatsheild_A] // Faentina Heatshield
+{
+    %MODULE[TweakScale]
+    {
+        type = Tantares_Default
+        defaultScale = 2.5
+	}
+}
